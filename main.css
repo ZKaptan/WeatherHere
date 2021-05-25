@@ -1,0 +1,164 @@
+/* Body styling */
+body {
+	box-sizing: border-box;
+	margin: 0 auto;
+
+	font-family: sans-serif;
+}
+/* Main container styling */
+.container {
+	padding-top: 10px;
+	background-color: #2fa4e7;
+	width: 50%;
+	margin: 10% auto;
+	background-color: #2fa4e7;
+	border-radius: 1%;
+}
+
+.cols {
+	text-align: center;
+}
+
+/* Header data styling */
+h2,
+h3 {
+	font-size: 30px;
+	margin: 10px;
+	color: #f3f4f6;
+}
+
+h3#w-desc {
+	color: rgb(85, 79, 79);
+}
+
+/* List styles */
+ul {
+	background-color: #fafafa;
+	margin: 0 auto;
+	list-style-type: none;
+	max-width: 75%;
+	padding: 0;
+}
+
+li {
+	padding: 10px 0;
+	border: 0.2px solid rgb(224, 221, 221);
+}
+/* Styling for change location button */
+.button-container {
+	margin-top: 25px;
+	padding-bottom: 25px;
+	display: flex;
+	justify-content: center;
+}
+
+.button-container button {
+	border-radius: 5%;
+	height: 40px;
+	background-color: rgb(67, 158, 211);
+	color: #f3f4f6;
+	font-size: 18px;
+	border: none;
+	cursor: pointer;
+}
+/* Horizontal rules styling */
+hr {
+	background-color: rgb(46, 45, 45);
+	border: none;
+	height: 1px;
+}
+
+/* Styling for the modal, by default, it should not appear */
+#modal {
+	position: fixed;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	border-radius: 5px;
+	z-index: 10;
+	width: 500px;
+	max-width: 80%;
+	background-color: #f3f4f6;
+	height: 285px;
+}
+
+/* Start of general styling for modal */
+.modal-header {
+	padding: 15px;
+}
+
+.modal-title {
+	font-size: 30px;
+	margin-bottom: -10px;
+	color: #2fa4e7;
+}
+.modal-body {
+	margin-left: 10px;
+}
+.modal-body label {
+	display: block;
+}
+.modal-body input {
+	width: 85%;
+	padding: 8px;
+}
+
+.modal-footer {
+	display: flex;
+	margin: 30px;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.modal-footer button {
+	font-size: 20px;
+	border-radius: 5%;
+	background-color: #2fa4e7;
+	cursor: pointer;
+	height: 40px;
+	border: none;
+}
+
+.modal-footer .close-modal {
+	background-color: inherit;
+	margin-left: 3px;
+}
+/* End of general styling for modal */
+
+/* Styling for when modal is open */
+.skills-content .open-modal {
+	background: inherit;
+	border: none;
+	cursor: pointer;
+}
+
+#modal.active {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+/* overlay styling that covers entire page. Should not be clickable when not active */
+#overlay {
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	transition: 200ms ease-in-out;
+	background-color: rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+}
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+/* Media query for mobile and tablet (container stretches the full width of the body) */
+
+@media screen and (max-width: 800px) {
+	.container {
+		width: 100%;
+	}
+}

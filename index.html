@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="main.css" />
+		<title>Weather App</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="cols">
+				<h2 id="w-location"></h2>
+				<h3 id="w-desc"></h3>
+				<h3 id="w-string"></h3>
+				<img id="w-icon" />
+				<ul id="w-details">
+					<li id="w-humidity"></li>
+
+					<li id="w-pressure"></li>
+
+					<li id="w-feels-like"></li>
+
+					<li id="w-wind"></li>
+				</ul>
+			</div>
+			<hr />
+			<div class="button-container">
+				<button class="open-modal" data-modal-target="#modal">
+					Change Location
+				</button>
+			</div>
+			<div id="modal" class="modal">
+				<div class="modal-header">
+					<div class="modal-title">Choose Location</div>
+				</div>
+				<hr />
+				<div class="modal-body">
+					<form id="w-form">
+						<div class="group">
+							<label for="city">City</label>
+							<input type="text" id="city" />
+						</div>
+						<div class="group">
+							<label for="state">Country</label>
+							<input type="text" id="country" />
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="close-modal" data-close-button>Close</button>
+					<button class="submit-data">Save changes</button>
+				</div>
+			</div>
+		</div>
+		<div id="overlay"></div>
+
+		<script src="js/storage.js"></script>
+		<script src="js/weather.js"></script>
+		<script src="js/ui.js"></script>
+		<script src="js/modal.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
